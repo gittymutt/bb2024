@@ -27,6 +27,7 @@ const Bio = () => {
 
   return (
     <div className="bio">
+      
       {avatarUrl && (
         <img
           alt={author?.firstName || ``}
