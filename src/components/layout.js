@@ -20,7 +20,9 @@ const Layout = ({ isHomePage, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
+     
       <header className="global-header">
+      <img className="header--logo" src="https://diffuse-mode.ml/wp-content/uploads/2022/01/logo.png" />
         {isHomePage ? (
           <h1 className="main-heading">
             <Link to="/">{parse(title)}</Link>

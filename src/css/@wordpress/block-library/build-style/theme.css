@@ -225,3 +225,12 @@
 #end-resizable-editor-section {
   display: none;
 }
+
+
+.global-header {
+  margin-bottom: 100px;
+}
+.header--logo {
+  width: 200px;
+  float: left;
+}
