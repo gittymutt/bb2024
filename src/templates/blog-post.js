@@ -21,6 +21,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     alt: post.featuredImage?.node?.alt || ``,
   }
 
+  console.log(post)
   return (
     <Layout>
       <Seo title={post.title} description={post.excerpt} />
@@ -100,6 +101,7 @@ export const pageQuery = graphql`
       excerpt
       content
       title
+      isSticky
       date(formatString: "MMMM DD, YYYY")
       featuredImage {
         node {

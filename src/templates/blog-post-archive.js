@@ -27,7 +27,7 @@ const BlogIndex = ({
 
   return (
     <Layout isHomePage>
-      <Seo title="All posts" />
+      <Seo title="About the Campaign" />
 
       <Bio />
 
@@ -43,6 +43,7 @@ const BlogIndex = ({
                 itemType="http://schema.org/Article"
               >
                 <header>
+                  {post.isSticky && (<p>Is sticky</p>)}
                   <h2>
                     <Link to={post.uri} itemProp="url">
                       <span itemProp="headline">{parse(title)}</span>
@@ -83,6 +84,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         excerpt
+        isSticky
       }
     }
   }

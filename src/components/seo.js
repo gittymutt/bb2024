@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import ReactGA from "react-ga4";
 
 const Seo = ({ description, lang, meta, title }) => {
   const { wp, wpUser } = useStaticQuery(
@@ -31,8 +32,14 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || wp.generalSettings?.description
   const defaultTitle = wp.generalSettings?.title
-
+  ReactGA.initialize([
+    {
+      trackingId: "G-F0WF07K781"
+    } 
+    ]);
   return (
+     
+    
     <Helmet
       htmlAttributes={{
         lang,
@@ -74,6 +81,8 @@ const Seo = ({ description, lang, meta, title }) => {
         },
       ].concat(meta)}
     />
+
+    
   )
 }
 
