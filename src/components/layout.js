@@ -35,7 +35,7 @@ const Layout = ({ isHomePage, children }) => {
       <main>{children}</main>
 
       <footer>
-        © {new Date().getFullYear()}, Paid for by The U.S. Sex Workers' Union and the Weed Collective.  
+        © {new Date().getFullYear()}, Paid for by The U.S. Sex Workers' Union and the Weed Collective....  
       </footer>
     </div>
   )
