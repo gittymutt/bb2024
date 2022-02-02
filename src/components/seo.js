@@ -37,9 +37,12 @@ const Seo = ({ description, lang, meta, title }) => {
       trackingId: "G-F0WF07K781"
     } 
     ]);
+    ReactGA.send("pageview");
+
   return (
      
-    
+
+
     <Helmet
       htmlAttributes={{
         lang,
