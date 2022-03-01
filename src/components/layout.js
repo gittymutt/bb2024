@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import parse from "html-react-parser"
+import Footer from "./Footer"
 
 const Layout = ({ isHomePage, children }) => {
   const {
@@ -36,9 +37,7 @@ const Layout = ({ isHomePage, children }) => {
 
       <main>{children}</main>
 
-      <footer>
-        © {new Date().getFullYear()}, Paid for by The U.S. Sex Workers' Union and the Weed Collective....  
-      </footer>
+      <Footer />
     </div>
   )
 }
