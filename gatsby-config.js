@@ -7,6 +7,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: 'https://bbjohnson2024.com'
+  },
   /**
    * Adding plugins to this array adds them to your Gatsby site.
    *
@@ -14,6 +17,14 @@ module.exports = {
    * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
    */
   plugins: [
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: "https://bbjohnson2024.com",
+        sitemap: `https://bbjohnson2024.com/sitemap.xml`,
+        policy: [{ userAgent: `*`, allow: `/` }],
+      },
+    },
     {
       /**
        * First up is the WordPress source plugin that connects Gatsby
